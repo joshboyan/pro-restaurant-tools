@@ -48,3 +48,129 @@
 
 @include motion-ui-transitions;
 @include motion-ui-animations;
+
+$color1: #FDFDFD;
+$color2: #586172;
+$color3: rgba(214,221,219,.4);
+$color4: #87C94C;
+$color5: #A7ACB5;
+$color6: #000000;
+$font1: 'Patua One', cursive;;
+$font2: 'Roboto', sans-serif;;
+$font3: 'Shadows Into Light Two', cursive;;
+
+html {
+  font-size: 16px;
+}
+body {
+  background-color: $color1;
+
+}
+a {
+  font-weight: bold;
+}
+h1,h2,h3,h4 {
+  font-family: $font1;
+}
+
+h1 {
+  font-size: 2.25rem;
+}
+p {
+  font-family: $font2;
+}
+
+ul {
+  list-style-type: none;
+}
+button {
+  width: 200px;
+  height: 75px;
+  border: 3px solid $color4;
+}
+header {
+  background-color: $color3;
+  padding-bottom: 20px;
+
+  a {
+    color: $color4;
+  }
+
+  div.row {
+    background-color: $color6;
+    font-size: .75rem;
+
+    button {
+      border: none;
+      text-align: right;
+    }
+
+    button:nth-of-type(3) {
+      font-size: 2rem;
+      text-align: center;
+    }
+
+    span {
+      display: none;
+    }
+  }
+
+  li {
+    font-size: 1.25rem;
+
+  }
+
+  li:before {
+    content: "\f0d6"; // FontAwesome Unicode
+    font-family: FontAwesome;
+    display: inline-block;
+    margin-left: -1.3em; // same as padding-left set on li
+    width: 1.3em; // same as padding-left set on li
+    font-size: 1rem;
+    padding-bottom:
+  }
+  div.medium-6 button:nth-of-type(1) {
+    background-color: $color4;
+    margin-bottom: 20px;
+
+    a {
+      font-size: 1.5rem;
+      color: $color1;
+    }
+  } 
+  div.medium-6:nth-of-type(3) {
+    display: none;
+  }
+}
+
+#points {
+  div {
+    border: 2px solid $color2;
+  }
+}
+
+#benefits {
+
+}
+
+#reviews {
+
+}
+
+#form {
+
+}
+
+footer {
+  #contact {
+
+  }
+
+  #social {
+
+  }
+
+  nav {
+
+  }
+}
