@@ -52,6 +52,7 @@ h1,h2,h3,h4 {
 h1 {
   font-size: 2.25rem;
   margin-top: 2.25rem;
+  width: 90vw;
 }
 
 h3 {
@@ -110,6 +111,7 @@ button {
 //removes horizontal scrolling in mobile
 .row .row {
   max-width: 102.5%;
+  padding-top: 0.663rem;
 }
 .close-button {
   border: 0px solid transparent;
@@ -149,11 +151,19 @@ button {
     padding-top: 11.391rem;
   }
 }
-
+li:before {
+  font-family: FontAwesome;
+  display: inline-block;
+  margin-left: -1.5rem; // same as padding-left set on li
+  width: 2.25rem; // same as padding-left set on li
+  font-size: 1.5rem;
+}
 header {
   background-color: $color3;
   padding-bottom: 2.25rem;
   border-bottom: $border;
+  height: 100vh;
+  overflow: hidden;
 
   div.row {
     background-color: $color7;
@@ -176,7 +186,9 @@ header {
 
   h2 {
     font-size: 1.5em;
+    line-height: 1.75rem;
     margin-left: 10%;
+    width: 90vw;
   }
 
   ul {
@@ -189,14 +201,19 @@ header {
 
   }
 
-  li:before {
-    content: "\f0d6"; // FontAwesome Unicode
-    font-family: FontAwesome;
-    display: inline-block;
-    margin-left: -1.5rem; // same as padding-left set on li
-    width: 2.25rem; // same as padding-left set on li
-    font-size: 1.5rem;
+  li:nth-of-type(1):before {
+    content: "\f002"; // FontAwesome Unicode
+    margin-right: -.2rem;
+  }
 
+  li:nth-of-type(2):before {
+    content: "\f201"; // FontAwesome Unicode
+    margin-left: -1.7rem;
+  }
+
+  li:nth-of-type(3):before {
+    content: "\f1ec"; // FontAwesome Unicode
+    margin-right: -.200 rem;
   }
 
 
@@ -225,15 +242,13 @@ header {
   div {
     border: 2px solid $color2;
     padding: 0;
-    overflow: hidden;
-
 
     h3 {
       display: block;
       position: relative;
       z-index: 30;
       width: 100%;
-      height: 3.375rem;
+      height: 3.5rem;
       background-color: $color6;
     }
     img {
@@ -246,19 +261,24 @@ header {
       position: relative;
       top: -2.25rem;
       padding: 0 5%;
+      margin-bottom: -3.375rem;
     }
 
   }
   button {
     margin: 0 20%;
     position: relative;
-    top: -2.25rem;
+    top: 2rem;
     background-color: $color1;
   }
 
   a {
     font-size: 1.5rem;
     color: $color4;
+  }
+
+  div.medium-6:nth-of-type(2) {
+    margin-top: 5.063rem;
   }
 }
 
@@ -298,16 +318,23 @@ header {
     }
     ul {
       margin-left: -.663rem;
+    }
 
-    li:before {
-      content: "\f067"; // FontAwesome Unicode
-      font-family: FontAwesome;
-      display: inline-block;
-      margin-left: -1.3rem; // same as padding-left set on li
-      width: 1.3rem; // same as padding-left set on li
-      font-size: .663rem;
+    li {
+      padding-top: .4rem;
+
     }
-    }
+      li:before {
+        content: "\f155"; // FontAwesome Unicode
+        margin-left: -.663rem; // same as padding-left set on li
+        width: 1.1rem; // same as padding-left set on li
+        font-size: .663rem;
+      }
+
+      .secondList:before {
+        content: "\f046"; // FontAwesome Unicode
+      }
+
   }
   .row:nth-of-type(3) {
     margin-bottom: 5.063rem;
@@ -316,6 +343,7 @@ header {
 
 #reviews {
   background-color: $color3;
+  padding-top: 2.25rem;
   border-top: $border;
   border-bottom: $border;
 //Slick Carousel styles
@@ -340,7 +368,7 @@ header {
     font-size: 7.594rem;
     position: relative;
     z-index: 100;
-    top: 42rem;
+    top: 40vh;
     left: -80%;
   }
   //Next Button
@@ -354,7 +382,7 @@ header {
     font-size: 7.594rem;
     position: relative;
     z-index: 100;
-    top: -5rem;
+    top: -30vh;
     left: 60%;
   }
   h4 {
@@ -375,31 +403,34 @@ header {
     img:nth-of-type(1) {
       position: relative;
       z-index: 10;
+      width: 250px;
       border-radius: 50%;
-      margin: 0 5.063rem;
+      margin: 0 2.25rem;
     }
     img:nth-of-type(2) {
       position: relative;
       z-index: 50;
-      top: -5.063rem;
+      width: 75px;
+      top: -3.375rem;
       left: 11.391rem;
     }
 
-    p:nth-of-type(2) {
+    .signature {
       margin-top: -5.063rem;
       padding-top: 1.5rem;
       text-align: center;
       font-family: $font3;
     }
-    p:nth-of-type(3){
+    .companyRole {
       text-align: right;
-      padding-right: 2.25rem;
+      padding-right: 10%;
       font: 1rem/1 $font2;
     }
 
   }
   .slick-track{
     margin-bottom: -2rem;
+    outline: none;
   }
 
   .fa-arrows-h {
@@ -412,6 +443,8 @@ header {
 
 #form {
   border-bottom: $border;
+  padding-bottom: 5.063rem;
+
 
   form  {
     width: 90%;
@@ -423,8 +456,10 @@ header {
     padding-top: 2.25rem;
   }
   p {
-    padding: 1.5rem 2.25rem 0 2.25rem ;
+    padding:0 2.25rem;
+
   }
+
   label {
     padding-left: 15%;
   }
@@ -444,7 +479,8 @@ header {
     position: relative;
   }
   button{
-    margin: 0 0 5.063rem 20%;
+    margin-left: 20%;
+    top: 2.25rem;
     font: bold 1rem/1 $font2;
     color: $color4;
     &:after {
@@ -503,7 +539,7 @@ footer {
     ul {
       padding-left: 15%;
       ul li{
-        padding-left: -15%;
+        margin-left: -15%;
       }
     }
 
@@ -515,4 +551,241 @@ footer {
     font-size: .663rem;
     color: $color1;
   }
+}
+@media screen and (min-width: 768px) {
+
+  html {
+    font-size: 130%;
+  }
+
+  button {
+    &:hover {
+      &:after {
+        left: 400px;
+      }
+    }
+  }
+  header {
+    height: 95vh;
+
+    div.row div a i {
+      display: none;
+    }
+
+    div.row span {
+      display: block;
+      color: $color1;
+      padding-top: 0;
+      font-size: 1.25rem;
+    }
+    h1 {
+      font-size: 3rem;
+      margin-left: 10%;
+      width: 80vw;
+      position: relative;
+      z-index: 100;
+    }
+    h2 {
+      width: 70vw;
+      position: relative;
+      z-index: 100;
+    }
+
+    ul {
+      width: 70vw;
+      margin-left: 10%;
+    }
+
+    div.medium-6:nth-of-type(3) {
+      display: block;
+      margin-top: 25vh;
+      position: relative;
+      z-index: 10;
+
+      img {
+        miv-width: 400px;
+        max-width: 600px;
+        position: absolute;
+
+      }
+    }
+  }
+
+  #points {
+    margin-top: 2.25rem;
+    margin-bottom: 5rem;
+
+    div.medium-6:first-child {
+      margin-left: -1rem;
+    }
+
+    div.medium-6:last-child {
+      margin-right: -1rem;
+      margin-top: 0;
+    }
+  }
+
+  #reviews {
+    padding-top: 3.375rem;
+    height: 100vh;
+
+    .slick-track {
+      margin-bottom: 0;
+    }
+      div {
+
+        img:nth-of-type(1) {
+          margin: 0 20%;
+
+        }
+        img:nth-of-type(2) {
+          left: 40%;
+          padding-bottom: 2.25rem;
+        }
+        p:nth-of-type(2) {
+          margin-left: 10%;
+        }
+
+      }
+
+    //Previous Button
+    button:nth-of-type(1):after {
+      display: inline;
+    }
+    //Next Button
+    button:nth-of-type(2):after {
+      display: inline;
+    }
+
+    .fa-arrows-h {
+      display: none;
+    }
+  }
+
+  #form {
+
+    form {
+      width: 70%;
+      margin-left: 15%;
+      input {
+        width: 90%;
+
+      }
+    }
+
+    .second {
+      width: 40%;
+      margin-left: 30%;
+    }
+  }
+
+  footer {
+    font-size: 1rem;
+
+    #contact {
+      text-align: center;
+
+
+      li:nth-of-type(3) {
+        padding-top: 1.5rem;
+      }
+    }
+
+    #social {
+      li {
+        display: block;
+      }
+
+      li:nth-of-type(1) {
+        padding-left: .663rem;
+      }
+      
+      span {
+        display: inline;
+      }
+    }
+
+    nav {
+      ul {
+        ul li {
+          margin-left: -30%;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 975px) {
+
+  #reviews {
+    div {
+
+      img:nth-of-type(1) {
+       margin-left: 5.063rem;
+
+      }
+      img:nth-of-type(2) {
+        left: 19rem;
+      }
+      p:nth-of-type(2) {
+        margin-left: 10%;
+      }
+
+    }
+  }
+
+  #contact {
+    text-align: left;
+
+    li:nth-of-type(3) {
+      padding-top: .663rem;
+    }
+  }
+
+}
+
+@media screen and (min-width: 1025px) {
+  button {
+    &:hover {
+      &:after {
+        left: 600px;
+      }
+    }
+  }
+
+
+  #form {
+    form {
+      max-width: 900px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    p {
+      width: 60%;
+      margin-left: 20%;
+    }
+    .second {
+      width: 30%;
+      margin-left: 35%;
+    }
+  }
+
+  #reviews {
+    div {
+
+      img:nth-of-type(1) {
+        width: 500px;
+        margin-left: 20%;
+
+      }
+      img:nth-of-type(2) {
+        width: 150px;
+        margin-left: 15%;
+      }
+      p:nth-of-type(2) {
+        margin-left: 0%;
+      }
+    }
+  }
+
 }
