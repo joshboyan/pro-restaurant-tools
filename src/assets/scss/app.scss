@@ -163,6 +163,7 @@ header {
   padding-bottom: 2.25rem;
   border-bottom: $border;
   height: 100vh;
+  min-height: 800px;
   overflow: hidden;
 
   div.row {
@@ -203,17 +204,17 @@ header {
 
   li:nth-of-type(1):before {
     content: "\f002"; // FontAwesome Unicode
-    margin-right: -.2rem;
+
   }
 
   li:nth-of-type(2):before {
     content: "\f201"; // FontAwesome Unicode
-    margin-left: -1.7rem;
+    margin-left: -1.5rem;
   }
 
   li:nth-of-type(3):before {
     content: "\f1ec"; // FontAwesome Unicode
-    margin-right: -.200 rem;
+    margin-right: -.2 rem;
   }
 
 
@@ -346,6 +347,7 @@ header {
   padding-top: 2.25rem;
   border-top: $border;
   border-bottom: $border;
+  min-height: 600px;
 //Slick Carousel styles
   .single-item {
     width: 100%;
@@ -382,7 +384,7 @@ header {
     font-size: 7.594rem;
     position: relative;
     z-index: 100;
-    top: -30vh;
+    top: -50vh;
     left: 60%;
   }
   h4 {
@@ -615,12 +617,16 @@ footer {
     margin-top: 2.25rem;
     margin-bottom: 5rem;
 
+    div {
+      width: 40%;
+    }
+
     div.medium-6:first-child {
-      margin-left: -1rem;
+      margin-left: 5%;
     }
 
     div.medium-6:last-child {
-      margin-right: -1rem;
+      margin-right: 5%;
       margin-top: 0;
     }
   }
@@ -628,6 +634,7 @@ footer {
   #reviews {
     padding-top: 3.375rem;
     height: 100vh;
+    min-height: 800px;
 
     .slick-track {
       margin-bottom: 0;
@@ -642,8 +649,17 @@ footer {
           left: 40%;
           padding-bottom: 2.25rem;
         }
-        p:nth-of-type(2) {
-          margin-left: 10%;
+
+        .signature {
+          margin: -11.063rem 0 0 30%;
+          padding-top: 1.5rem;
+          text-align: center;
+          font-family: $font3;
+        }
+        .companyRole {
+          text-align: right;
+          padding-right: 0%;
+          font: 1rem/1 $font2;
         }
 
       }
